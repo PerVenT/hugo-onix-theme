@@ -17,7 +17,7 @@ for (const key in simpleIcons) {
 }
 
 fs.writeFileSync(
-  path.join(import.meta.dirname, '../../data/m10c/icons.json'),
+  path.join(import.meta.dirname, '../../data/onix/icons.json'),
   JSON.stringify(icons, null, 2),
   'utf8',
 )

@@ -1,7 +1,8 @@
-name = "m10c"
+name = "hugo-onix-theme"
 license = "MIT"
 licenselink = "https://github.com/vaga/hugo-theme-m10c/blob/master/LICENSE.md"
-description = "A minimalistic (m10c) theme for bloggers"
+description = "A minimalistic theme for bloggers"
+version = "0.1.0"
 homepage = "https://github.com/vaga/hugo-theme-m10c"
 tags = ["blog", "minimalistic", "minimal", "responsive", "dark"]
 features = [

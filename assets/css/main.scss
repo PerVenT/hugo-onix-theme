@@ -1,8 +1,5 @@
-$darkest-color: {{ .Site.Params.style.darkestColor | default "#1e1f2a" }};
-$dark-color: {{ .Site.Params.style.darkColor | default "#292a39" }};
-$light-color: {{ .Site.Params.style.lightColor | default "#a9cfbc" }};
-$lightest-color: {{ .Site.Params.style.lightestColor | default "#f6d878" }};
-$primary-color: {{ .Site.Params.style.primaryColor | default "#c0d66d" }};
+{{- $colorScheme := .Site.Params.colorScheme | default "gruvbox-dark-soft" -}}
+@import 'schemes/{{ $colorScheme }}';
 
 @import 'base';
 

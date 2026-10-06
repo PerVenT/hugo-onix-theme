@@ -1,4 +1,4 @@
-# m10c theme
+# hugo-onix-theme
 
 ![Intro](https://github.com/vaga/hugo-theme-m10c/blob/master/images/cover.png)
 
@@ -7,8 +7,8 @@ A Hugo minimalistic theme for bloggers
 Main features:
 
 - Fully responsive
-- Twitter Cards, Open Graph, Disqus and Google Analytics supported (see Hugo docs)
-- Customizable colors
+- Open Graph and Google Analytics supported (see Hugo docs)
+- Two built-in color schemes (Monokai Pro Ristretto, Gruvbox Dark Soft)
 - Customizable picture and description
 - Customizable menu on sidebar
 - Customizable social media links on sidebar
@@ -27,12 +27,12 @@ $ hugo new site [path]
 Clone this repository into `themes/` directory:
 ```bash
 $ cd [path]
-$ git clone https://github.com/vaga/hugo-theme-m10c.git themes/hugo-theme-m10c
+$ git clone https://github.com/vaga/hugo-theme-m10c.git themes/hugo-onix-theme
 ```
 
 Add this line  in the `config.toml` file:
 ```toml
-theme = "hugo-theme-m10c"
+theme = "hugo-onix-theme"
 ```
 
 ### Configuration
@@ -65,18 +65,17 @@ To add a social link, add the following lines in `params`:
   url = "https://github.com/vaga"
 ```
 
-To change theme colors, add the following lines in `params`:
+To change the color scheme, set `colorScheme` in `params` to one of the bundled schemes:
 
-```
-[params.style]
-  darkestColor = "#d35050"
-  darkColor = "#212121"
-  lightColor = "#f5e3e0"
-  lightestColor = "#f5f5f5"
-  primaryColor = "#ffffff"
+- `monokai-pro-ristretto` (default)
+- `gruvbox-dark-soft`
+
+```toml
+[params]
+  colorScheme = "gruvbox-dark-soft"
 ```
 
-If you want the above theme colors, you can see the [exampleSite/config.toml](/exampleSite/config.toml) file.
+Schemes are defined as SCSS files in `assets/css/schemes/`.
 
 ### Icons
 

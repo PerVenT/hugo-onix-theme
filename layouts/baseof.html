@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="{{ .Site.LanguageCode | default "en-us" }}">
+<html lang="{{ .Site.Language.Locale | default "en-us" }}">
   <head>
     <title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} // {{ .Site.Title }}{{ end }}</title>
     <link rel="shortcut icon" href="{{ .Site.Params.favicon | default "/favicon.ico" }}" />
@@ -14,9 +14,8 @@
     {{ printf `<link rel=%q type=%q href=%q title=%q>` .Rel .MediaType.Type .Permalink site.Title | safeHTML }}
     {{ end }}
 
-    {{ template "_internal/google_analytics.html" . }}
-    {{ template "_internal/twitter_cards.html" . }}
-    {{ template "_internal/opengraph.html" . }}
+    {{ partial "google_analytics.html" . }}
+    {{ partial "opengraph.html" . }}
 
   </head>
   <body>
